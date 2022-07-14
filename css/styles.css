@@ -1,0 +1,395 @@
+body {
+	background-color: #0F3371;
+	font-family: monospace, Helvetica;
+	font-size: 15px;
+	color: white;
+}
+
+/* BEGIN HEADER */
+#header-nav {
+	background-color: darkgoldenrod;
+	border-radius: 0;
+	border: 0;
+}
+
+.navbar-brand {
+	padding-top: 25px;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none;  /* no underline for the text */
+}
+
+.navbar-brand p { /* Kosher cert */
+  color: #000;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
+}
+.navbar-brand p span { /* Star-K */
+  vertical-align: middle;
+}
+
+#profile-img {
+	background: url("../img/ss_profile.png") no-repeat;
+	width: 150px;
+	height: 150px;
+	margin: 10px 15px 10px 0;
+	border-radius: 50%;
+}
+
+.profile-font {
+	font-family: 'Josefin Sans', sans-serif;
+	color: blanchedalmond;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #222;
+	margin-top: 1.0;
+	margin-bottom: 1.0;
+	line-height: .75;
+}
+
+#logo-img {
+	width: 60px;
+	height: 60px;
+	margin: 2px;
+	border-radius: 50%;
+}
+
+#nav-list {
+	margin-top: 10px;
+}
+
+#nav-list a {
+	color: #0F3371;
+	text-align: center;
+}
+
+#nav-list a:hover {
+	background: gray;
+}
+
+#nav-list a span {
+	font-size: 1.5em;
+}
+
+#phone {
+	margin-top: 5px;
+}
+
+#phone a {
+	text-align: right;
+	padding-bottom: 0;
+}
+
+#phone div {
+	color: #0F3371;  /* for `call me` */
+	text-align: right;
+	padding-right: 5px;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #0F3371;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */
+
+/* BEGIN HOMEPAGE */
+.container .jumbotron {
+	box-shadow: 0 0 50px darkgoldenrod;
+	border: 2px solid darkgoldenrod;
+}
+
+#writings-tile, #life-tile, #map-tile {
+	height: 250px;
+	width: 100%;  /* 100% of the container of the tiles. */
+	margin-bottom: 15px;
+	position: relative;
+	border: 2px solid darkgoldenrod;
+	overflow: hidden;
+}
+
+#writings-tile:hover, #life-tile:hover, #map-tile:hover {
+	box-shadow: 0 1px 5px 1px darkgoldenrod;
+}
+
+#writings-tile {
+	background: url("../img/ghibli_writing.png") no-repeat;
+	background-position: center;
+}
+
+#life-tile {
+	background: url("../img/ghibli_life.png") no-repeat;
+	background-position: center;
+}
+
+#writings-tile span, #life-tile span, #map-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background: darkgoldenrod;
+	color: #0F3371;
+	opacity: 0.8;
+	font-weight: bold;
+}
+
+/* END HOMEPAGE */
+
+/* BEGIN WRITING */
+
+.writing-categories-tile {
+	position: relative;
+	border: 2px solid darkgoldenrod;
+	overflow: hidden;
+	width: 100%;
+	height: 500px;
+	margin: 0 auto 15px;
+}
+
+.writing-categories-tile span {
+	position: absolute;
+	border: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+	text-transform: uppercase;
+	background: darkgoldenrod;
+	color: #0F3371;
+	opacity: 0.8;
+	font-weight: bold;
+}
+
+.writing-categories-tile:hover {
+	box-shadow: 0 5px 50px 5px darkgoldenrod;
+}
+
+#writing-categories-title + div {  /* selects next sibling in the id */
+	margin-bottom: 15px;
+}
+
+/* END WRITING */
+
+
+/* BEGIN FOOTER */
+.panel-footer {
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #222;
+	border-top: 0;
+}
+
+.panel-footer div.row {
+	margin-bottom: 35px;
+}
+
+#hours > span, #address > span {
+	font-size: 1.3em;
+	color: darkgoldenrod;
+	text-transform: uppercase;
+}
+
+#address p {
+	color: blueviolet;
+	font-size: 0.8em;
+	line-height: 1.8;  /* squeezes between-line space */
+}
+
+#testimonials {
+	font-style: italic;
+}
+
+#testimonials p:nth-child(2) {
+	margin-bottom: 0;
+}
+/* END OF FOOTER */
+
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+	/* Header */
+  .navbar-brand {
+    padding-top: 15px;
+    height: 60px;
+  }
+
+  .navbar-brand h1 { /* Summer */
+    padding-top: 10px;
+    font-size: 3vw; /* 1vw = 1% of viewport width */
+  }
+
+  .navbar-brand span.profile-font {
+  	font-size: 1.5vw;
+  }
+
+	/* End Header */
+	.container .jumbotron {  /* replace with high HD image */
+		background: url(../img/ghibli_bg_view1.png) no-repeat;
+		height: 675px;
+	}
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  #logo-img {
+    background: url("../img/ss_profile.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 5px 5px 5px 0;
+  }
+
+  .navbar-brand h1 { /* Summer */
+    padding-top: 10px;
+    font-size: 3.5vw; /* 1vw = 1% of viewport width */
+  }
+
+  .navbar-brand span.profile-font {
+  	font-size: 2vw;
+  }
+
+  /* End Header */
+
+  .container .jumbotron {  /* replace with med HD image */
+	background: url(../img/ghibli_bg_view1.png) no-repeat;
+	height: 558px;
+  }
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 0px;
+    height: 60px;
+  }
+
+  .navbar-brand h1 { /* Summer */
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+  }
+
+  .navbar-brand span.profile-font {
+  	font-size: 2vw;
+  }
+  /* End Header */
+
+  .container .jumbotron {  /* replace with low-med HD image */
+	background: url(../img/ghibli_bg_view1.png) no-repeat;
+	height: 432px;
+  }
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 0px;
+    height: 130px;
+  }
+
+  .navbar-brand h1 { /* Summer */
+    padding-top: 10px;
+    font-size: 6vw; /* 1vw = 1% of viewport width */
+  }
+
+  .navbar-brand span.profile-font {
+  	font-size: 3vw;
+  }
+
+  .navbar-brand p { /* Hot micro */
+    font-size: .6em;
+    margin-top: 12px;
+  }
+  .navbar-brand p img { /* UCSD logo */
+    height: 20px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1.0em;
+    margin-right: 5px;
+  }
+
+  .profile-font {
+	font-size: 1.3em;
+  }
+
+  #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: darkgoldenrod;
+    color: #0F3371;
+  }
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: 1em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  /* End Header */
+
+  /* adding '.container' to be more specific than default, to override */
+  .container .jumbotron {  /* replace with low HD image */
+	margin-top: 30px;
+	padding: 0;
+  }
+
+  #writings-tile, #life-tile {
+  	width: 360px;
+  	margin: 0 auto 15px;
+  }
+
+  /* Footer */
+  .panel-footer section {
+  	margin-bottom: 30px;
+  	text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+  	margin-bottom: 0;
+  }
+  .panel-footer section hr {
+  	width: 50%;
+  }
+  /* End Footer */
+
+}
+
+
+/********** Super extra small devices only (e.g. iPhone 4) **********/
+@media (max-width: 479px) {
+
+  /* Header */
+  .navbar-brand h1 {
+    padding-top: 5px;
+    font-size: 8vw;
+  }
+
+  .navbar-brand span.profile-font {
+  	font-size: 4vw;
+  }
+  /* End Header */
+
+  #writings-tile, #life-tile {
+  	width: 230px;
+  	margin: 0 auto 15px;
+}
+
+
+
+
+

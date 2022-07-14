@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test page</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+
+          <!-- Nav bar profile image. -->
+          <a href="index.html" class="pull-left visible-md visible-lg"> <!-- make logo clickable. -->
+            <div id="profile-img" alt="Profile Image"></div>
+          </a>
+          
+          <!-- Nav bar brand + brand texts. -->
+          <div class="navbar-brand">
+            <a href="index.html"><h1 class="profile-font">Summer's Blog</h1></a>
+            <p>
+              <img id="logo-img" src="img/ucsd_logo.png" alt="UCSD Logo">
+              <span class="profile-font">Microbiologist @UCSD</span>
+            </p>
+          </div>
+
+          <!-- Collapsable menu. -->
+          <!-- `navbar-toggle`: controls the position of collapsed bar. -->
+          <!-- `collapse`: communicator to a plugin - if clicked, it goes away. -->
+          <!--    collapse also enables the behaviors indicated in data-toggle/target. -->
+          <!-- `aria-expanded`: a verbal reader feature, here for doc completion. -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span> <!-- screen-reader-only -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- The actual dropdown menu. -->
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <!-- `nav-list`: for styling. -->
+          <!-- `nav navbar-nav`: spec this as a component. -->
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="writings.html">
+                <!-- `glyphicon ..-..`: vector-based icon looked up at https://getbootstrap.com/docs/3.3/components/. -->
+                <!--    These will behave like fonts. -->
+                <!-- `hidden-xs`: let br go away when screen is xs. -->
+                <span class="glyphicon glyphicon-heart"></span><br class="hidden-xs">
+                Writings
+              </a>
+            </li>
+            <li>
+              <a href="sub_page_2.html">
+                <span class="glyphicon glyphicon-star"></span><br class="hidden-xs">
+                Life
+              </a>
+            </li>
+            <li>
+              <a href="sub_page_3.html">
+                <span class="glyphicon glyphicon-cloud"></span><br class="hidden-xs">
+                Others
+              </a>
+            </li>
+            <!-- Phone number that, on click, triggers a call. -->
+            <li id="phone" class="hidden-xs">
+              <a href="tel:361-425-7162">
+                <span>361-425-7162</span>
+              </a>
+              <div>Call me!</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Call glyphicon when small (makes it visible still). -->
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:361-425-7162">
+    <span class="glyphicon glyphicon-earphone"></span>
+    361-425-7162
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center visible-xs">Call me!</div>
+
+  
+  <!-- Main content: Jumbotron + image-based page links. -->
+  <div id="main-content" class="container">
+
+    <!-- Jumbotron box. -->
+    <div class="jumbotron">
+      <img src="img/ghibli_bg_view1.png" alt="Ghibli background" class="img-responsive visible-xs">
+    </div>
+
+    <!-- Page links. -->
+    <div id="home-tiles" class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="writings.html"><div id="writings-tile"><span>Writings</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="life.html"><div id="life-tile"><span>Life</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <!-- `_blank`: open up a new tab when clicking on map. -->
+        <a href="https://goo.gl/maps/8HaFmr5xsbBrHqr68" target="_blank">
+          <div id="map-tile">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13760.672085646629!2d-97.7538445!3d30.4313385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x59c378453f694076!2sFlex!5e0!3m2!1sen!2sus!4v1657747476481!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <span>Map</span>
+          </div>
+        </a>
+      </div>
+    </div> <!-- End of #home-tiles -->
+  </div> <!-- End of #main-content -->
+
+  <!-- Footer section. -->
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <!-- Section 1 (left) -->
+        <section id="hours" class="col-sm-4">
+          <span>Hours</span><br>
+          Mon-Suns: 8:00am - 10:00pm<br>
+          Not husband Closed
+          <hr class="visible-xs">
+        </section>
+        <!-- Section 2 (mid) -->
+        <section id="address" class="col-sm-4">
+          <span>Address</span><br>
+          12455 Research Blvd<br>
+          Austin, TX 78759
+          <p>* Hug area within 3-4 miles.</p>
+          <hr class="visible-xs">
+        </section>
+        <!-- Section 3 (right) -->
+        <section id="testimonials" class="col-sm-4">
+          <p>"The best wife anyone can have!"</p>
+          <p>"One of a kind!"</p>
+          <p>"Ben4 Ben4 Bao3!"</p>
+          <hr class="visible-xs">
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright of Summer Shi</div>
+      
+    </div>
+
+  </footer>
+
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+
+</body>
+</html>
