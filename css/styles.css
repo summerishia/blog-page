@@ -56,7 +56,7 @@ body {
 }
 
 #nav-list {
-	margin-top: 10px;
+	margin-top: 40px;
 }
 
 #nav-list a {
@@ -92,7 +92,7 @@ body {
 }
 .navbar-header button.navbar-toggle {
   clear: both;
-  margin-top: -30px;
+  margin-top: -80px;
 }
 /* END HEADER */
 
@@ -223,11 +223,13 @@ body {
 
   .navbar-brand h1 { /* Summer */
     padding-top: 10px;
-    font-size: 3vw; /* 1vw = 1% of viewport width */
+    font-size: 50px;
+    /* font-size: 3vw; /* 1vw = 1% of viewport width */
   }
 
   .navbar-brand span.profile-font {
-  	font-size: 1.5vw;
+    font-size: 20px;
+  	/*font-size: 1.5vw;*/
   }
 
 	/* End Header */
@@ -257,6 +259,10 @@ body {
   	font-size: 2vw;
   }
 
+  #nav-list {
+    font-size: 0.8em;
+  }
+
   /* End Header */
 
   .container .jumbotron {  /* replace with med HD image */
@@ -281,6 +287,11 @@ body {
   .navbar-brand span.profile-font {
   	font-size: 2vw;
   }
+
+  #nav-list {
+    font-size: 0.8em;
+  }
+
   /* End Header */
 
   .container .jumbotron {  /* replace with low-med HD image */
@@ -312,6 +323,10 @@ body {
   }
   .navbar-brand p img { /* UCSD logo */
     height: 20px;
+  }
+
+  .navbar-header {
+  	height: 145px;
   }
 
   #collapsable-nav a { /* Collapsed nav menu text */
@@ -380,7 +395,7 @@ body {
   }
 
   .navbar-brand span.profile-font {
-  	font-size: 4vw;
+  	font-size: 0;
   }
   /* End Header */
 
